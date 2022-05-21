@@ -1,9 +1,35 @@
-import React from "react";
+import Head from "next/head";
 
-export const ShopLayout = () => {
+interface Props {
+  children: React.ReactNode;
+  title: string;
+  pageDescription: string;
+  keywords?: string;
+  imageFullUrl?: string;
+}
+
+export const ShopLayout: React.FC<Props> = ({
+  children,
+  title,
+  pageDescription,
+  imageFullUrl,
+  keywords,
+}) => {
   return (
-    <div>
-      <h1>Layout</h1>
-    </div>
+    <>
+      <Head>
+        <title>{title}</title>
+        <meta name="description" content={pageDescription} />
+        <meta name="keywords" content={keywords} />
+      </Head>
+
+      <nav>{/* TODO: Navbar */}</nav>
+
+      {/* TODO: Sidebar */}
+
+      <main className="m-20 mx-auto max-w-7xl px-8">{children}</main>
+
+      <footer>{/* Todo de footer */}</footer>
+    </>
   );
 };
