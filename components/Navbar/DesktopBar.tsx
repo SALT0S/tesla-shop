@@ -42,7 +42,7 @@ export const DesktopBar = () => {
         </div>
       </div>
 
-      <div className="hidden md:ml-10 md:block md:space-x-8 md:pr-4">
+      <div className="hidden md:block md:space-x-8">
         {Navigation.map((item) => (
           <ActiveLink
             key={item.name}
