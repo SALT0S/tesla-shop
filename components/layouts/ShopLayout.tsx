@@ -28,7 +28,7 @@ export const ShopLayout: React.FC<Props> = ({
 
       {/* TODO: Sidebar */}
 
-      <main className="m-20 mx-auto max-w-7xl px-8">{children}</main>
+      <main className="mx-auto max-w-7xl px-8">{children}</main>
 
       <footer>{/* Todo de footer */}</footer>
     </>
