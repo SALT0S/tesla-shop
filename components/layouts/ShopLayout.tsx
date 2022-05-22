@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { Navbar } from "../Navbar";
 
 interface Props {
   children: React.ReactNode;
@@ -23,7 +24,7 @@ export const ShopLayout: React.FC<Props> = ({
         <meta name="keywords" content={keywords} />
       </Head>
 
-      <nav>{/* TODO: Navbar */}</nav>
+      <Navbar />
 
       {/* TODO: Sidebar */}
 
