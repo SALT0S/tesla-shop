@@ -12,10 +12,11 @@ const Home: NextPage = () => {
     >
       <h1 className="text-3xl font-bold underline">tesla shop</h1>
       <h2 className="">Todos los productos</h2>
-      <div>
+      <div className="grid grid-cols-4 gap-4">
         {initialData.products.map((product) => (
           <div key={product.slug}>
             <p>{product.title}</p>
+            <img src={`/products/${product.images[0]}`} alt={product.title} />
           </div>
         ))}
       </div>
