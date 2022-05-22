@@ -1,6 +1,8 @@
 import type { NextPage } from "next";
-import Head from "next/head";
+
 import { ShopLayout } from "../components/layouts";
+
+import { initialData } from "../database/products";
 
 const Home: NextPage = () => {
   return (
@@ -10,6 +12,13 @@ const Home: NextPage = () => {
     >
       <h1 className="text-3xl font-bold underline">tesla shop</h1>
       <h2 className="">Todos los productos</h2>
+      <div>
+        {initialData.products.map((product) => (
+          <div key={product.slug}>
+            <p>{product.title}</p>
+          </div>
+        ))}
+      </div>
     </ShopLayout>
   );
 };
