@@ -7,15 +7,27 @@ const MenuNav = [
   { name: "Kids", href: "/kids" },
 ];
 const SidebarNav = [
-  { name: "Perfil", icon: UserCircleIcon, href: "/" },
-  { name: "Mis Ordenes", icon: UserCircleIcon, href: "/men" },
-  { name: "Ingresar", icon: "", href: "/women" },
-  { name: "Salir", icon: "", href: "/kids" },
+  { name: "Perfil", href: "/" },
+  { name: "Mis Ordenes", href: "/men" },
+  { name: "Ingresar", href: "/women" },
+  { name: "Salir", href: "/kids" },
+];
+
+const AdminPanel = [
+  {
+    title: "Admin Panel",
+    menu: [
+      { name: "Productos", href: "/" },
+      { name: "Ordenes", href: "/men" },
+      { name: "Usuarios", href: "/women" },
+    ],
+  },
 ];
 
 const Menu = {
   MenuNav,
   SidebarNav,
+  AdminPanel,
 };
 
 export default Menu;

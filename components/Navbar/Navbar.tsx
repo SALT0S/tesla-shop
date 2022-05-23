@@ -1,12 +1,12 @@
 import { Popover } from "@headlessui/react";
 import { DesktopBar } from "./DesktopBar";
-import { MobileBar } from "./MobileBar";
+import { Sidebar } from "./Sidebar";
 
 export const Navbar = () => {
   return (
     <Popover>
       <DesktopBar />
-      <MobileBar />
+      <Sidebar />
     </Popover>
   );
 };
