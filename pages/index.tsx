@@ -15,7 +15,6 @@ const Home: NextPage = () => {
       <div className="grid grid-cols-4 gap-4">
         {initialData.products.map((product) => (
           <div key={product.slug}>
-            <p>{product.title}</p>
             <img src={`/products/${product.images[0]}`} alt={product.title} />
           </div>
         ))}

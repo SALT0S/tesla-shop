@@ -1,25 +1,16 @@
-import { Fragment } from "react";
-import { Popover, Transition } from "@headlessui/react";
+import { Popover } from "@headlessui/react";
 import { XIcon } from "@heroicons/react/outline";
-import navigation from "./Navigation";
+import Menu from "./Navigation";
 import { ActiveLink } from "./ActiveLink";
 
 export const MobileBar = () => {
   return (
-    <Transition
-      as={Fragment}
-      enter="duration-150 ease-out"
-      enterFrom="opacity-0 scale-95"
-      enterTo="opacity-100 scale-100"
-      leave="duration-100 ease-in"
-      leaveFrom="opacity-100 scale-100"
-      leaveTo="opacity-0 scale-95"
-    >
+    <div className="fixed top-0 w-full backdrop-blur-sm transition">
       <Popover.Panel
         focus
-        className="inset-x-0 top-0 z-10 origin-top-right transform p-2 transition md:hidden"
+        className="inset-x-0 z-10 ml-auto h-screen w-5/6 origin-top-right transform transition-all md:w-3/6"
       >
-        <div className="overflow-hidden rounded-lg bg-gray-800 shadow-md ring-1 ring-black ring-opacity-5">
+        <div className="absolute h-full w-full overflow-hidden bg-gray-50">
           <div className="flex items-center justify-between px-5 pt-4">
             <div className="flex text-white  ">
               <span className="bg-white py-1 px-2 text-xl font-bold text-black">
@@ -36,24 +27,32 @@ export const MobileBar = () => {
               </Popover.Button>
             </div>
           </div>
-          <div className="space-y-1 px-2 pt-2 pb-3">
-            {navigation.map((item) => (
+
+          <div className="space-y-1 px-2">
+            <hr className="my-2 mx-3 bg-gray-500" />
+            {Menu.SidebarNav.map((item) => (
               <ActiveLink
                 key={item.name}
                 href={item.href}
                 text={item.name}
-                className="block rounded-md px-3 py-2 text-base font-medium text-gray-200 hover:bg-gray-700 hover:text-gray-200"
+                className="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-gray-700 hover:text-gray-200"
               />
             ))}
           </div>
-          <a
-            href="#"
-            className="block w-full bg-slate-600 px-5 py-3 text-center font-medium text-white hover:bg-slate-700"
-          >
-            Log in
-          </a>
+
+          <div className="space-y-1 px-2 md:hidden">
+            <hr className="my-2 mx-3 bg-gray-500" />
+            {Menu.MenuNav.map((item) => (
+              <ActiveLink
+                key={item.name}
+                href={item.href}
+                text={item.name}
+                className="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-gray-700 hover:text-gray-200"
+              />
+            ))}
+          </div>
         </div>
       </Popover.Panel>
-    </Transition>
+    </div>
   );
 };

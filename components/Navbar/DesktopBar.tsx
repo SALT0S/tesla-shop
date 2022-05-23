@@ -2,13 +2,9 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { Popover } from "@headlessui/react";
-import {
-  MenuAlt3Icon,
-  SearchIcon,
-  ShoppingCartIcon,
-} from "@heroicons/react/outline";
+import { SearchIcon, ShoppingCartIcon } from "@heroicons/react/outline";
 
-import Navigation from "./Navigation";
+import Menu from "./Navigation";
 import { ActiveLink } from "./ActiveLink";
 
 import TeslaLogo from "../../public/logo/tesla-logo.svg";
@@ -32,18 +28,11 @@ export const DesktopBar = () => {
           <Link href="/">
             <a className="bg-white py-1 px-2 font-bold text-black">Shop</a>
           </Link>
-
-          <div className="-mr-2 flex items-center md:hidden">
-            <Popover.Button className="inline-flex items-center justify-center p-2 text-gray-100">
-              <span className="sr-only">Open main menu</span>
-              <MenuAlt3Icon className="h-7 w-7" aria-hidden="true" />
-            </Popover.Button>
-          </div>
         </div>
       </div>
 
       <div className="hidden md:block md:space-x-8">
-        {Navigation.map((item) => (
+        {Menu.MenuNav.map((item) => (
           <ActiveLink
             key={item.name}
             text={item.name}
@@ -61,18 +50,19 @@ export const DesktopBar = () => {
           </Popover.Button>
         </div>
 
-        <div className="mx-3 flex items-center">
-          <Popover.Button className="inline-flex items-center justify-center text-gray-900">
-            <span className="sr-only">Open Cart</span>
-            <ShoppingCartIcon className="h-6 w-6" aria-hidden="true" />
-          </Popover.Button>
+        <div className="mx-3 flex cursor-pointer items-center">
+          <ShoppingCartIcon className="h-6 w-6" aria-hidden="true" />
         </div>
 
-        <Link href="/">
-          <a className="py-1 px-2 font-medium text-gray-700 hover:font-semibold hover:text-gray-900 md:block">
+        <Popover.Button>
+          <span className="sr-only">Open main menu</span>
+          <p
+            aria-hidden="true"
+            className="py-1 px-2 font-medium text-black hover:font-semibold hover:text-gray-700 md:block"
+          >
             Menu
-          </a>
-        </Link>
+          </p>
+        </Popover.Button>
       </div>
     </nav>
   );

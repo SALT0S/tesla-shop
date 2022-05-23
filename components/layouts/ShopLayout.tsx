@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { Navbar } from "../Navbar";
+import { SideMenu } from "../ui/SideMenu";
 
 interface Props {
   children: React.ReactNode;
@@ -25,8 +26,6 @@ export const ShopLayout: React.FC<Props> = ({
       </Head>
 
       <Navbar />
-
-      {/* TODO: Sidebar */}
 
       <main className="mx-auto max-w-7xl px-8">{children}</main>
 
