@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { Navbar } from "../Navbar";
-import { SideMenu } from "../ui/SideMenu";
+import { SideMenu } from "../ui/";
 
 interface Props {
   children: React.ReactNode;
