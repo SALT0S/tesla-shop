@@ -19,7 +19,7 @@ export const ProductCard: React.FC<Props> = ({ product }) => {
   }, [isHovered, product.images]);
 
   return (
-    <Link href="/products/slug" passHref prefetch={false}>
+    <Link href="/product/slug" passHref prefetch={false}>
       <div
         key={product.slug}
         onMouseEnter={() => setIsHovered(true)}
