@@ -1,10 +1,9 @@
-import React from "react";
 import { ShopLayout } from "../components/layouts";
 
 const Custom404 = () => {
   return (
     <ShopLayout title="Page Not Found" pageDescription="Page not found">
-      <div className="flex h-[calc(100vh-100px)] flex-col items-center justify-center text-center md:flex-row md:text-left">
+      <div className="flex flex-col items-center justify-center text-center md:flex-row md:text-left">
         <div className="flex text-8xl font-extralight">
           <h1>404</h1>
           <p className="hidden md:block">|</p>

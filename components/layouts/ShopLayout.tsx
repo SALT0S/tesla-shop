@@ -18,7 +18,7 @@ export const ShopLayout: React.FC<Props> = ({
   keywords,
 }) => {
   return (
-    <>
+    <div className="flex min-h-screen flex-col">
       <Head>
         <title>{title}</title>
         <meta name="description" content={pageDescription} />
@@ -27,11 +27,11 @@ export const ShopLayout: React.FC<Props> = ({
 
       <Navbar />
 
-      <main className="container mx-auto max-w-7xl flex-1 px-8">
+      <main className="container mx-auto max-w-7xl flex-[1_0_auto] px-8">
         {children}
       </main>
 
       <Footer />
-    </>
+    </div>
   );
 };
