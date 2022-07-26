@@ -8,7 +8,7 @@ const EmptyPage = () => {
       title="Empty cart"
       pageDescription="There is no item in the shopping cart"
     >
-      <div className="flex h-[calc(100vh-100px)] flex-col items-center justify-center text-center md:flex-row md:text-left">
+      <div className="flex h-[calc(100vh-150px)] flex-col items-center justify-center text-center md:flex-row md:text-left">
         <div className="text-8xl font-extralight">
           <MdOutlineRemoveShoppingCart className="" />
         </div>

@@ -1,6 +1,6 @@
 import Head from "next/head";
-import { Navbar } from "../Navbar";
-import { SideMenu } from "../ui/";
+import { Footer } from "../footer";
+import { Navbar } from "../navbar";
 
 interface Props {
   children: React.ReactNode;
@@ -27,9 +27,11 @@ export const ShopLayout: React.FC<Props> = ({
 
       <Navbar />
 
-      <main className="mx-auto max-w-7xl px-8">{children}</main>
+      <main className="container mx-auto max-w-7xl flex-1 px-8">
+        {children}
+      </main>
 
-      <footer>{/* Todo de footer */}</footer>
+      <Footer />
     </>
   );
 };
