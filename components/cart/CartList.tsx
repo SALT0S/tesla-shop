@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { initialData } from "../../database/products";
 
 const productsInCart = [
@@ -11,8 +12,34 @@ export const CartList = () => {
   return (
     <>
       {productsInCart.map((product) => (
-        <div key={product.slug}>
-          <p>{product.slug}</p>
+        <div key={product.slug} className="mb-3 text-sm">
+          <div className="flex gap-5">
+            <div className="relative h-28 w-28">
+              <Image
+                src={`/products/${product.images[0]}`}
+                alt={product.title}
+                layout="fill"
+                objectFit="cover"
+                placeholder="blur"
+                blurDataURL={`/products/${product.images[0]}`}
+                className="rounded-lg bg-gray-50"
+              />
+            </div>
+
+            <div className="flex-1">
+              <p className="pb-2">{product.title}</p>
+              <p className="pb-2">Dark Gray, Size: M</p>
+
+              <div className="inline-flex gap-6">
+                <p>Quantity: 1</p>
+                <p className="border-b-2 border-gray-300 hover:border-black">
+                  Remove
+                </p>
+              </div>
+            </div>
+
+            <p>{`$${product.price}`}</p>
+          </div>
         </div>
       ))}
     </>
