@@ -28,7 +28,7 @@ export const CartList = () => {
 
             <div className="flex-1">
               <p className="pb-2">{product.title}</p>
-              <p className="pb-2">Dark Gray, Size: M</p>
+              <p className="pb-2">Dark Gray, Size: {product.sizes[2]}</p>
 
               <div className="inline-flex gap-6">
                 <p>Quantity: 1</p>
@@ -38,7 +38,7 @@ export const CartList = () => {
               </div>
             </div>
 
-            <p>{`$${product.price}`}</p>
+            <p>{`$${product.price}`}.00</p>
           </div>
         </div>
       ))}
