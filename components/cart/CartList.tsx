@@ -8,7 +8,11 @@ const productsInCart = [
   initialData.products[3],
 ];
 
-export const CartList = () => {
+interface Props {
+  editable?: boolean;
+}
+
+export const CartList: React.FC<Props> = ({ editable = false }) => {
   return (
     <>
       {productsInCart.map((product) => (
@@ -32,9 +36,12 @@ export const CartList = () => {
 
               <div className="inline-flex gap-6">
                 <p>Quantity: 1</p>
-                <p className="border-b-2 border-gray-300 hover:border-black">
-                  Remove
-                </p>
+
+                {editable && (
+                  <p className="border-b-2 border-gray-300 hover:border-black">
+                    Remove
+                  </p>
+                )}
               </div>
             </div>
 
