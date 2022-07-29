@@ -15,13 +15,10 @@ const HistoryPage = () => {
                 Product name
               </th>
               <th scope="col" className="py-3 px-6">
-                Color
+                Status
               </th>
               <th scope="col" className="py-3 px-6">
-                Category
-              </th>
-              <th scope="col" className="py-3 px-6">
-                Price
+                Order
               </th>
             </tr>
           </thead>
@@ -35,22 +32,10 @@ const HistoryPage = () => {
               >
                 Apple MacBook Pro 17&quot;
               </th>
-              <td className="py-4 px-6">Sliver</td>
-              <td className="py-4 px-6">Laptop</td>
-              <td className="py-4 px-6">$2999</td>
+              <td className="py-4 px-6">Payed</td>
+              <td className="py-4 px-6">View order</td>
             </tr>
-            <tr className="border-b">
-              <td className="py-4 px-6">1</td>
-              <th
-                scope="row"
-                className="whitespace-nowrap py-4 px-6 font-medium text-gray-900"
-              >
-                Microsoft Surface Pro
-              </th>
-              <td className="py-4 px-6">White</td>
-              <td className="py-4 px-6">Laptop PC</td>
-              <td className="py-4 px-6">$1999</td>
-            </tr>
+
             <tr className="border-b bg-white">
               <td className="py-4 px-6">1</td>
               <th
@@ -59,10 +44,10 @@ const HistoryPage = () => {
               >
                 Magic Mouse 2
               </th>
-              <td className="py-4 px-6">Black</td>
-              <td className="py-4 px-6">Accessories</td>
-              <td className="py-4 px-6">$99</td>
+              <td className="py-4 px-6">Not payed</td>
+              <td className="py-4 px-6">View order</td>
             </tr>
+
             <tr className="border-b">
               <td className="py-4 px-6">1</td>
               <th
@@ -72,20 +57,7 @@ const HistoryPage = () => {
                 Google Pixel Phone
               </th>
               <td className="py-4 px-6">Gray</td>
-              <td className="py-4 px-6">Phone</td>
-              <td className="py-4 px-6">$799</td>
-            </tr>
-            <tr>
-              <td className="py-4 px-6">1</td>
-              <th
-                scope="row"
-                className="whitespace-nowrap py-4 px-6 font-medium text-gray-900"
-              >
-                Apple Watch 5
-              </th>
-              <td className="py-4 px-6">Red</td>
-              <td className="py-4 px-6">Wearables</td>
-              <td className="py-4 px-6">$999</td>
+              <td className="py-4 px-6">View order</td>
             </tr>
           </tbody>
         </table>
