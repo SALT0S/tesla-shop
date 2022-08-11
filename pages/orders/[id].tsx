@@ -24,7 +24,7 @@ const OrderPage = () => {
             <CartList />
           </div>
 
-          <div className="lg:w-5/12">
+          <div className="lg:w-5/12 ">
             <div className="mt-8  rounded-2xl lg:mt-0 lg:p-8 lg:shadow-xl">
               <hr className="lg:hidden" />
               <h2 className="pt-8 text-xl font-bold lg:pt-0">Order Summary</h2>
