@@ -23,7 +23,7 @@ export const AuthLayout: React.FC<Props> = ({
         <meta name="keywords" content={keywords} />
       </Head>
 
-      <main className="container mx-auto max-w-7xl flex-[1_0_auto] items-center justify-center px-8">
+      <main className="container mx-auto flex max-w-7xl flex-[1_0_auto] items-center justify-center px-8">
         {children}
       </main>
 
